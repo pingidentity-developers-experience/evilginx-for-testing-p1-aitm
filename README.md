@@ -90,6 +90,7 @@ Browse to, [https://phishing-domain.com/YStcNrSR](https://phishing-domain.com/YS
 - Update the hosts and domains and sub configs:
   - Replace target hosts/domains with production host/domain names.
   - Replace the phishing domain with your version of phishing-domain.com.
+  - Update the `auth_token` and `credentials` configs for `path` and `search` settings so Evilginx knows where to capture them.
 
 Once you're done with all of that, build your dev Docker image with the following...
 
