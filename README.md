@@ -1,12 +1,16 @@
-# Evilginx for Testing PingOne Protect AiTM Predictor
+# Evilginx for Testing Your App
+Validating the results of the PingOne Protect AiTM Predictor
 
-This project includes config files, a Dockerfile, and instructions for building an instance of an Evilginx phishing proxy server to test your PingOne Protect AiTM predictor policy.
+***As with any pen testing tool, without proper authorization, a penetration tester is considered to be engaging in unethical hacking. It's illegal to test a website or app for a vulnerability without the owner's permission.*** [Disclaimer](#disclaimer)
+
+## This project 
+Includes config files, a Dockerfile, and instructions for building an instance of an Evilginx phishing proxy server to test your app or website is being protected by the PingOne Protect AiTM predictor.
 
 *Tl;dr, I understand MiTM attacks and know what Evilginx is. Just take me to the instructions.*
 
 - [How-to](#how-to)
 
-*I totally borked my implementation. Take me to the reference docs.*
+*I want to understand more about this first. Take me to the reference docs.*
 
 - [Docs & Resources](#helpMeObiWon)
 
@@ -26,6 +30,10 @@ This project is to help developers test PingOne Protect's AiTM predictor in a po
 ## Evilginx Details
 
 Evilginx is a man-in-the-middle reverse-proxy attack framework used for phishing account credentials, tokens, and session cookies, which will allow bypassing of multi-factor authentication, identity theft, and ATO (account takeover).
+
+## Testing Scenario
+
+![Proxying your app](./evilginx-testing.png)
 
 ## How-to<a name="how-to"></a>
 
@@ -140,3 +148,9 @@ There are multiple links here to different docs because any documentation you fi
 - [PingOne Protect](https://apidocs.pingidentity.com/pingone/main/v1/api/#pingone-protect)
 - [Protect APIs](https://apidocs.pingidentity.com/pingone/platform/v1/api/#pingone-protect)
 - [Protect SDK](https://apidocs.pingidentity.com/pingone/native-sdks/v1/api/#pingone-protect-native-sdks)
+
+# Disclaimer:<a name="disclaimer"></a>
+
+I AM AWARE THAT EVILGINX CAN BE USED FOR VERY NEFARIOUS PURPOSES. EVILGINX SHOULD BE USED ONLY IN LEGITIMATE PENETRATION TESTING ASSIGNMENTS WITH WRITTEN PERMISSION FROM TO-BE-PHISHED PARTIES. 
+
+THIS TESTING TOOL AND SAMPLE CODE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL PING IDENTITY OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) SUSTAINED BY YOU OR A THIRD PARTY, HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT ARISING IN ANY WAY OUT OF THE USE OF THIS DEMO AND SAMPLE CODE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
