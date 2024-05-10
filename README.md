@@ -42,6 +42,7 @@ Evilginx is a man-in-the-middle reverse-proxy attack framework used for phishing
 - Update the hosts and domains and sub configs:
   - Replace target hosts/domains with your dev branch host/domain names.
   - Replace the phishing domain with whatever you want to call it.
+  - Update the `auth_token` and `credentials` configs for `path` and `search` settings so Evilginx knows where to capture them.
 
 **File:** `/etc/hosts` (on your local work computer)
 
@@ -59,7 +60,7 @@ Once you're done with all of that, build your dev Docker image with the followin
 
 Follow your team or company's own Docker image name/tag conventions.
 
-`docker build -f Dockerfile -t mySiteName-evilginx:edge .`
+`docker build -f Dockerfile -t myimagename-evilginx:edge .`
 
 **Note:** If you are building your Docker image for a platform/CPU architecture different than your machine, check out,
 
@@ -67,7 +68,7 @@ Follow your team or company's own Docker image name/tag conventions.
 
 #### Startup
 
-`docker run --rm -it -e TZ=America/Denver -p 443:443 mySiteName-evilginx:edge`
+`docker run --rm -it -e TZ=America/Denver -p 443:443 myimagename-evilginx:edge`
 
 #### Test It
 
@@ -94,7 +95,7 @@ Once you're done with all of that, build your dev Docker image with the followin
 
 #### Docker Image Build
 
-`docker build -f Dockerfile -t mySiteName-evilginx:latest .`
+`docker build -f Dockerfile -t myimagename-evilginx:latest .`
 
 **Note:** If you are building your Docker image for a platform/CPU architecture different than your machine, check out,
 
@@ -104,7 +105,7 @@ Once you're done with all of that, build your dev Docker image with the followin
 
 Deploy it to your Docker or k8s (kubernetes) environment, or run it manually with,
 
-`docker run --rm -it -e TZ=America/Denver -p 443:443 mySiteName-evilginx:edge`
+`docker run --rm -it -e TZ=America/Denver -p 443:443 myimagename-evilginx:edge`
 
 ## Reference Documentation & Useful Resources<a name="helpMeObiWon"></a>
 
