@@ -30,7 +30,7 @@
     }
   ],
   "phishlets": {
-    "bxfinance": {
+    "evil-phishlet": {
       "hostname": "phishing-domain.com",
       "unauth_url": "",
       "enabled": true,

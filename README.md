@@ -104,7 +104,7 @@ Once you're done with all of that, build your dev Docker image with the followin
 
 #### Docker Image Build
 
-`docker build -f Dockerfile -t myimagename-evilginx:latest .`
+`docker build -f Dockerfile -t myimagename-evilginx:edge .`
 
 **Note:** If you are building your Docker image for a platform/CPU architecture different than your machine, check out,
 
