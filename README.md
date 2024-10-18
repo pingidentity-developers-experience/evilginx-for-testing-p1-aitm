@@ -67,11 +67,11 @@ Evilginx is a man-in-the-middle reverse-proxy attack framework used for phishing
 
 **Important** Don't forget to comment out any entries you added to `/etc/hosts` before promoting to QA, production or other environments.
 
-Once you're done with all of that, build your dev Docker image with the following...
+Once you're done with all of that, build your test Docker image with the following...
 
 #### Docker Image Build
 
-Follow your team or company's own Docker image name/tag conventions.
+Follow your team or company's own Docker image name:tag conventions.
 
 `docker build -f Dockerfile -t <my_image_name>-evilginx:edge .`
 
@@ -99,12 +99,16 @@ Browse to, [https://<phish_sub>.<phishing_domain>/YStcNrSR](https://phishing-dom
 
 **File:** `config.json`, `evil-phishlet.yaml`
 
-- Update the hosts and domains and sub configs:
-  - Replace target hosts/domains with production host/domain names.
-  - Replace the phishing domain with your version of phishing-domain.com.
-  - Update the `auth_token` and `credentials` configs for `path` and `search` settings so Evilginx knows where to capture them.
+- Update the following values in both files:
 
-Once you're done with all of that, build your dev Docker image with the following...
+  - <phishing_domain>
+  - <target_url>
+  - <target_domain>
+  - <target_sub>
+
+- In evil-phishlet.yaml, update the `auth_token` and `credentials` configs for `path` and `search` settings so Evilginx knows where to capture them.
+
+Once you're done with all of that, build your test Docker image with the following...
 
 #### Docker Image Build
 
