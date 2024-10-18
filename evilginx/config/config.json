@@ -7,7 +7,7 @@
     "ipv4": "127.0.0.1",
     "external_ipv4": "0.0.0.0",
     "bind_ipv4": "",
-    "unauth_url": "https://bxfinance-oct-za.ping-devops.com/app/",
+    "unauth_url": "<target_url>",
     "https_port": 443,
     "dns_port": 53,
     "autocert": "on"

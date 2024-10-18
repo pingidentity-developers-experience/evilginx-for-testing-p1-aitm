@@ -54,6 +54,7 @@ Evilginx is a man-in-the-middle reverse-proxy attack framework used for phishing
   - <target_url>
   - <target_domain>
   - <target_sub>
+  - <auth_target_domain> This may be the same as your target domain depending on your application.
 
 - In evil-phishlet.yaml, update the `auth_token` and `credentials` configs for `path` and `search` settings so Evilginx knows where to capture them.
 
