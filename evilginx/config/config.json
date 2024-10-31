@@ -3,14 +3,14 @@
     "mode": "off"
   },
   "general": {
-    "domain": "phishing-domain.com",
+    "domain": "<phishing_domain>",
     "ipv4": "127.0.0.1",
     "external_ipv4": "0.0.0.0",
     "bind_ipv4": "",
-    "unauth_url": "https://target.domain.com/",
+    "unauth_url": "<target_url>",
     "https_port": 443,
     "dns_port": 53,
-    "autocert":"on"
+    "autocert": "on"
   },
   "lures": [
     {
@@ -31,7 +31,7 @@
   ],
   "phishlets": {
     "evil-phishlet": {
-      "hostname": "phishing-domain.com",
+      "hostname": "<phishing_domain>",
       "unauth_url": "",
       "enabled": true,
       "visible": true
